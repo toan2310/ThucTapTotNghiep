@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/icon"
-        android:layout_centerInParent="true"
-        android:id="@+id/icon_image"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_above="@id/bottom"/>
 
-    <LinearLayout
-        android:id="@+id/linear_layout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginTop="300dp"
-            android:src="@drawable/logo" />
-
-        <Button
-            android:id="@+id/login"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background"
-            android:text="Log In"
-            android:textAllCaps="false" />
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_navigation"
+            app:itemIconTint="@color/selector"
+            app:labelVisibilityMode="unlabeled"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/bottom_menu"/>
 
-        <androidx.legacy.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="10dp" />
 
-        <Button
-            android:id="@+id/register"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background"
-            android:text="Register"
-            android:textAllCaps="false" />
-
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 </RelativeLayout>
