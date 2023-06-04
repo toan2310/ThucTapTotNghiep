@@ -13,4 +13,7 @@
     <string name="error_password_not_match">Password not match</string>
 
     <string name="login_success">Hi, {0}. You login with password is {1}</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log-Out</string>
 </resources>
